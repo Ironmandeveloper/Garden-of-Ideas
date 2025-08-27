@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+    --accent-start: #ecb211;
+    --accent-end: #2b5f2d;
+    --focus-color: #2b5f2d;
+    --text: #fff;
+    --light-bar: rgba(236, 178, 17, 0.114);
+    --heading-font: "Afacad", Sans-serif;
+    --body-font: "Poppins", Sans-serif;
+    --input-font: "Inter", Sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../images/inner-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--body-font);
+}
+.card {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--body-font);
+}
+.sectionTitle {
+    font-family: var(--heading-font);
+    font-size: 4.5rem;
+    color: var(--accent-start);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+#progressBar {
+    width: 100%;
+    height: 32px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-start), #9fc1dd);
+    transition: width 0.3s ease;
+    border-radius: 16px 0 0 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+#progressText {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+    line-height: 32px;
+    color: #000;
+    font-family: var(--input-font);
+    user-select: none;
+    pointer-events: none;
+    left: 1rem;
+    transition: left 0.2s, right 0.2s, text-align 0.2s;
+    width: auto;
+    min-width: 48px;
+    text-align: left;
+    z-index: 2;
+}
+#progressText.centered {
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    min-width: 0;
+}
+h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-start);
+    text-align: center;
+    margin: 3rem 0 1rem;
+    font-size: 2.5rem;
+}
+h3 {
+    font-family: var(--body-font);
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+p.story {
+    font-family: var(--input-font);
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border: 2px solid var(--accent-start);
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    font-family: var(--input-font);
+    font-size: 1.4rem;
+    min-height: 160px;
+    overflow: hidden;
+    resize: none;
+}
+textarea::placeholder {
+    color: #d2cdcd !important;
+    font-size: 1.4rem !important;
+}
+.controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.controls button {
+    min-width: 150px;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    background: var(--accent-start);
+    color: #000;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.controls button:hover,
+.controls button:focus,
+.controls button:active {
+    background: var(--focus-color);
+    color: #fff;
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+}
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/* Result Page Button Colors */
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+.result-btn-orange {
+    background: #ecb211 !important;
+    color: #000 !important;
+}
+.result-btn-blue {
+    background: #9fc1dc !important;
+    color: #fff !important;
+}
+.result-btn-green {
+    background: #2b5f2d !important;
+    color: #fff !important;
+}
+.result-btn-orange:hover,
+.result-btn-blue:hover,
+.result-btn-green:hover,
+.result-btn-orange:focus,
+.result-btn-blue:focus,
+.result-btn-green:focus,
+.result-btn-orange:active,
+.result-btn-blue:active,
+.result-btn-green:active {
+    background: #2b5f2d !important;
+    color: #fff !important;
+}
+dl dt {
+    font-family: var(--heading-font);
+    margin: 2rem 0 0.5rem;
+    font-size: 1.7rem;
+    color: var(--accent-start);
+}
+dl dd {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-bar);
+    font-family: var(--input-font);
+    font-size: 1rem;
+    color: #fff;
+}
+.ai-enhanced-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(236, 178, 17, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+.ai-enhanced-title {
+    font-family: var(--heading-font);
+    font-size: 2.8rem;
+    color: var(--accent-start);
+    margin-bottom: 0.5rem;
+}
+.ai-enhanced-subtitle {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--accent-start);
+    margin-bottom: 1rem;
+}
+.ai-enhanced-description,
+.ai-enhanced-paragraphs p {
+    font-family: var(--input-font);
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.ai-enhanced-paragraphs h5 {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    color: var(--accent-start);
+    margin-top: 1rem;
+}
+.ai-plant-image {
+    display: block;
+    max-width: 200px;
+    margin: 1.5rem auto;
+}
+.ai-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.ai-buttons button {
+    min-width: 200px;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    background: var(--accent-start);
+    color: #000;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.ai-buttons button:hover,
+.ai-buttons button:focus,
+.ai-buttons button:active {
+    background: var(--focus-color);
+    color: #fff;
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+}
+#aiResult {
+    display: none;
+}
